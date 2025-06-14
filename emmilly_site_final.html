@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Para Emmilly &hearts;
+  </title>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;  
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+     
+     
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background: 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="20" font-size="16" fill="%23d4c5a9" opacity="0.1">🌳</text><text x="70" y="40" font-size="12" fill="%23c4b597" opacity="0.15">🐱</text><text x="30" y="70" font-size="14" fill="%23b4a587" opacity="0.1">🏖️</text><text x="80" y="80" font-size="10" fill="%23d4c5a9" opacity="0.12">🎵</text></svg>') repeat,
+                linear-gradient(135deg, #f4f1e8 0%, #e8dcc6 50%, #d4c5a9 100%);
+            color: #5d4e37;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Papel vintage texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, transparent 20%, rgba(255,255,255,0.3) 21%, rgba(255,255,255,0.3) 34%, transparent 35%, transparent),
+                linear-gradient(0deg, rgba(0,0,0,0.05) 50%, transparent 50%);
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+        }
+
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: #8b4513;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #6b5b47;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        /* Disco de Vinil */
+        .vinyl-player {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .vinyl-record {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #1a1a1a 0%, #333 50%, #1a1a1a 100%);
+            border-radius: 50%;
+            position: relative;
+            animation: spin 3s linear infinite;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .vinyl-record::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background: #8b4513;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .vinyl-record::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid rgba(139, 69, 19, 0.3);
+            border-radius: 50%;
+        }
+
+        .vinyl-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #d4c5a9;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            text-align: center;
+            color: #5d4e37;
+            font-weight: bold;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .now-playing {
+            text-align: center;
+            margin: 20px 0;
+            font-style: italic;
+            color: #8b4513;
+        }
+
+        .vintage-section {
+            background: rgba(255, 248, 240, 0.8);
+            border: 3px solid #d4c5a9;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            position: relative;
+            background-image: 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><text x="10" y="30" font-size="20" fill="%23d4c5a9" opacity="0.2">🐱</text><text x="150" y="60" font-size="18" fill="%23c4b597" opacity="0.15">🌿</text><text x="30" y="150" font-size="16" fill="%23b4a587" opacity="0.18">📜</text><text x="170" y="180" font-size="14" fill="%23d4c5a9" opacity="0.2">🎶</text></svg>') no-repeat right bottom;
+        }
+
+        .vintage-section::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #d4c5a9, #e8dcc6, #d4c5a9);
+            border-radius: 15px;
+            z-index: -1;
+        }
+
+        .section-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #8b4513;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .poem-section {
+            background: #f9f6f0;
+            border-left: 5px solid #8b4513;
+            padding: 30px;
+            margin: 30px 0;
+            font-style: italic;
+            line-height: 1.8;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .poem-author {
+            text-align: right;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        .elements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .element-card {
+            background: rgba(255, 248, 240, 0.9);
+            border: 2px solid #d4c5a9;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .element-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .element-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .element-title {
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 10px;
+        }
+
+        .photo-vintage {
+            width: 100%;
+            max-width: 300px;
+            height: 250px;
+            background: #f0e6d2;
+            border: 15px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            margin: 20px auto;
+            display: block;
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .photo-vintage:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .photo-vintage:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #e8dcc6, #d4c5a9);
+            color: #8b4513;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .interactive-vintage {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .vintage-btn {
+            background: linear-gradient(145deg, #d4c5a9, #c4b597);
+            color: #5d4e37;
+            border: 2px solid #8b4513;
+            padding: 15px 30px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .vintage-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(145deg, #c4b597, #b4a587);
+        }
+
+        .hidden-content {
+            display: none;
+            background: rgba(255, 248, 240, 0.95);
+            border: 2px dashed #8b4513;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .text-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: justify;
+            background: rgba(255, 248, 240, 0.7);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #8b4513;
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 2.5rem;
+            opacity: 0.2;
+            animation: gentleFloat 12s ease-in-out infinite;
+        }
+
+        .floating-cat { animation-delay: 0s; }
+        .floating-tree { animation-delay: 3s; }
+        .floating-beach { animation-delay: 6s; }
+        .floating-music { animation-delay: 9s; }
+
+        @keyframes gentleFloat {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) rotate(-5deg); 
+                opacity: 0.15;
+            }
+            25% { 
+                transform: translateY(-30px) translateX(10px) rotate(0deg); 
+                opacity: 0.25;
+            }
+            50% { 
+                transform: translateY(-15px) translateX(-5px) rotate(3deg); 
+                opacity: 0.2;
+            }
+            75% { 
+                transform: translateY(-25px) translateX(15px) rotate(-2deg); 
+                opacity: 0.18;
+            }
+        }
+
+        /* Decorações nos cantos */
+        .corner-decoration {
+            position: fixed;
+            font-size: 4rem;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .corner-top-left {
+            top: 20px;
+            left: 20px;
+            transform: rotate(-15deg);
+        }
+
+        .corner-top-right {
+            top: 20px;
+            right: 20px;
+            transform: rotate(15deg);
+        }
+
+        .corner-bottom-left {
+            bottom: 20px;
+            left: 20px;
+            transform: rotate(15deg);
+        }
+
+        .corner-bottom-right {
+            bottom: 20px;
+            right: 20px;
+            transform: rotate(-15deg);
+        }
+
+        /* Seção do Vídeo */
+        .video-section {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .heart-button {
+            background: linear-gradient(145deg, #d4c5a9, #c4b597);
+            border: 3px solid #8b4513;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            font-size: 3rem;
+            color: #8b4513;
+            cursor: pointer;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .heart-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        .heart-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(139, 69, 19, 0.2), transparent);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.6s ease;
+        }
+
+        .heart-button.animate::before {
+            width: 200px;
+            height: 200px;
+        }
+
+        .video-container {
+            display: none;
+            max-width: 600px;
+            margin: 40px auto;
+            border: 10px solid #fff;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            transform: rotate(-1deg);
+            background: #f0e6d2;
+            padding: 10px;
+        }
+
+        .video-container.show {
+            display: block;
+            animation: videoAppear 1s ease;
+        }
+
+        @keyframes videoAppear {
+            from { 
+                opacity: 0; 
+                transform: rotate(-1deg) scale(0.8) translateY(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: rotate(-1deg) scale(1) translateY(0); 
+            }
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, #e8dcc6, #d4c5a9);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5d4e37;
+            font-size: 1.2rem;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .love-message {
+            display: none;
+            background: rgba(255, 248, 240, 0.95);
+            border: 3px solid #8b4513;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 500px;
+            text-align: center;
+            animation: loveMessageAppear 2s ease;
+        }
+
+        .love-message.show {
+            display: block;
+        }
+
+        @keyframes loveMessageAppear {
+            0% { 
+                opacity: 0; 
+                transform: scale(0.5) rotate(10deg); 
+            }
+            50% { 
+                opacity: 0.7; 
+                transform: scale(1.1) rotate(-5deg); 
+            }
+            100% { 
+                opacity: 1; 
+                transform: scale(1) rotate(0deg); 
+            }
+        }
+
+        .love-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #8b4513;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .vintage-section {
+                padding: 25px;
+            }
+            
+            .interactive-vintage {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .vinyl-record {
+                width: 150px;
+                height: 150px;
+            }
+
+            .heart-button {
+                width: 100px;
+                height: 100px;
+                font-size: 2.5rem;
+            }
+
+            .love-text {
+                font-size: 2rem;
+            }
+        }
+  </style>
+ </head>
+ <audio id="audioAlianca" src="alianca.mp3">
+ </audio>
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+        const audio = document.getElementById('audioAlianca');
+        const vinyl = document.querySelector('.vinyl-record');
+
+        if (vinyl) {
+            vinyl.style.cursor = 'pointer';
+            vinyl.addEventListener('click', function () {
+                if (audio.readyState >= 1) {
+                    audio.currentTime = 27;
+                    audio.play();
+                } else {
+                    audio.addEventListener('loadedmetadata', function () {
+                        audio.currentTime = 27;
+                        audio.play();
+                    }, { once: true });
+                }
+            });
+        }
+    });
+ </script>
+ <body>
+  <div class="floating-elements" id="floatingElements">
+  </div>
+  <!-- Decorações nos cantos -->
+  <div class="corner-decoration corner-top-left">
+   🌳
+  </div>
+  <div class="corner-decoration corner-top-right">
+   🐱
+  </div>
+  <div class="corner-decoration corner-bottom-left">
+   🏖️
+  </div>
+  <div class="corner-decoration corner-bottom-right">
+   🎵
+  </div>
+  <div class="container">
+   <header>
+    <h1 class="main-title">
+     Para Emmilly
+    </h1>
+    <p class="subtitle">
+     "Como dizia Vin&iacute;cius: o amor &eacute; uma coisa mais musical"
+    </p>
+   </header>
+   <!-- Disco de Vinil tocando Aliança -->
+   <div class="vinyl-player">
+    <div class="vinyl-record">
+     <div class="vinyl-label">
+      ALIAN&Ccedil;A
+      <br/>
+      <small>
+       Tribalistas
+      </small>
+     </div>
+    </div>
+   </div>
+   <div class="now-playing">
+    &sung; Toque no disco para ouvir a m&uacute;sica &sung;
+   </div>
+   <!-- Seção de Poesia -->
+   <div class="vintage-section">
+    <h2 class="section-title">
+     Noites Brancas - Dostoi&eacute;vski
+    </h2>
+    <div class="poem-section">
+     <p>
+      "Agora, quando estou ao seu lado e converso com voc&ecirc;, sinto medo de pensar no futuro. Porque no futuro, pode haver novamente a solid&atilde;o, de novo aquela vida sem sentido, com cheiro de coisa velha. E com o que eu vou sonhar, se j&aacute; fui t&atilde;o feliz ao seu lado enquanto estava acordado? Ah, que b&ecirc;n&ccedil;&atilde;o foi, minha querida, voc&ecirc; n&atilde;o ter virado o rosto naquele primeiro momento. Porque agora, mesmo que a solid&atilde;o volte, eu saberei que houve um instante  mesmo que breve em que o amor n&atilde;o s&oacute; me tocou, mas viveu dentro de mim. E isso j&aacute; &eacute; o bastante para iluminar os anos que ainda vir&atilde;o."
+     </p>
+     <br/>
+     <p>
+      <em>
+       "Eu sou apenas um sonhador, um apaixonado, que encontrou no sil&ecirc;ncio da noite a voz do seu cora&ccedil;&atilde;o"
+      </em>
+     </p>
+     <br/>
+     <p>
+      &ldquo;Nosso amor &eacute; um para&iacute;so no meio do inferno.&rdquo;
+      <br/>
+      &ldquo;Amar algu&eacute;m significa v&ecirc;-lo como Deus o concebeu.&rdquo;
+      <br/>
+      &ldquo;Que seja claro o seu c&eacute;u, que seja luminoso e sereno o seu lindo sorriso; aben&ccedil;oada seja voc&ecirc;..."
+     </p>
+     <div class="poem-author">
+      - Para minha Emmilly
+     </div>
+    </div>
+   </div>
+   <!-- As Coisas que Ela Ama -->
+   <div class="vintage-section">
+    <h2 class="section-title">
+     O que me faz lembrar de voc&ecirc;
+    </h2>
+    <div class="elements-grid">
+     <div class="element-card">
+      <span class="element-icon">
+       🐱
+      </span>
+      <div class="element-title">
+       Gatinhos
+      </div>
+      <p>
+       Seus olhinhos brilham quando v&ecirc; um gatinho, e eu amo ver essa paix&atilde;o pelos bixinhos.
+      </p>
+     </div>
+     <div class="element-card">
+      <span class="element-icon">
+       🎵
+      </span>
+      <div class="element-title">
+       MPB
+      </div>
+      <p>
+       Tim Maia, Tribalistas... Eu admito, seu gosto musical &eacute; infinitamente melhor que o meu.
+      </p>
+     </div>
+     <div class="element-card">
+      <span class="element-icon">
+       🌳
+      </span>
+      <div class="element-title">
+       Natureza
+      </div>
+      <p>
+       As &aacute;rvores, o verde, a paz que voc&ecirc; encontra na natureza... Voc&ecirc; tem uma conex&atilde;o com tudo isso.
+      </p>
+     </div>
+     <div class="element-card">
+      <span class="element-icon">
+       📷
+      </span>
+      <div class="element-title">
+       Tirar fotos
+      </div>
+      <p>
+       Eu sei o tanto que voc&ecirc; gosta de registrar os pequenos momentos, e fazer deles algo inesquecivel
+      </p>
+     </div>
+     <div class="element-card">
+      <span class="element-icon">
+       📜
+      </span>
+      <div class="element-title">
+       Poesia
+      </div>
+      <p>
+       Vin&iacute;cius de Moraes e outros poetas... Voc&ecirc; encontra beleza nas palavras e nos versos.
+      </p>
+     </div>
+     <div class="element-card">
+      <span class="element-icon">
+       ☀️
+      </span>
+      <div class="element-title">
+       Amanhecer
+      </div>
+      <p>
+       Voc&ecirc; aprecia os pequenos momentos belos da vida, como um lindo amanhecer.
+      </p>
+     </div>
+    </div>
+   </div>
+   <!-- Fotos Vintage -->
+   <div class="vintage-section">
+    <h2 class="section-title">
+     Nossos Momentos
+    </h2>
+    <div class="photo-vintage">
+     <img src="primeira.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+    </div>
+    <div class="photo-vintage">
+     <img src="buque.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+    </div>
+    <div class="photo-vintage">
+     <img src="deoculos.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+    </div>
+   </div>
+   <!-- Interatividade -->
+   <div class="vintage-section">
+    <h2 class="section-title">
+     Momentos Especiais
+    </h2>
+    <div class="interactive-vintage">
+     <button class="vintage-btn" onclick="showMemories()">
+      📖 Nossas Mem&oacute;rias
+     </button>
+     <button class="vintage-btn" onclick="showSurprise()">
+      🎁 Surpresa
+     </button>
+     <button class="vintage-btn" onclick="showLetter()">
+      💌 Carta para Voc&ecirc;
+     </button>
+    </div>
+    <div class="hidden-content" id="memoriesContent">
+     <h3 style="color: #8b4513; margin-bottom: 20px;">
+      📖 Mem&oacute;rias Especiais
+     </h3>
+     <div class="text-content">
+      <p>
+       <strong>
+        Momentinhos que s&atilde;o s&oacute; nossos:
+       </strong>
+      </p>
+      <br/>
+      <p>
+       &bull; A ida no parque Fernão Dias
+      </p>
+      <p>
+       &bull; O dia que eu te dei aquele buquê de flores...
+      </p>
+      <p>
+       &bull; Quando a gente escutou disco juntos pela primeira vez
+      </p>
+      <p>
+       &bull; A primeira vez que eu escrevi para voc&ecirc;...
+      </p>
+        <p>
+         &bull; Quando dormimos juntos pela primeira vez
+        </p> 
+        <p>
+         &bull; A primeira vez que eu te vi de óculos
+        </p>
+        <p>
+         &bull; Todas as vezes que eu te vi sorrindo
+        </p>
+        <p>
+         &bull; A nossa primeira vez se olhando nos olhos e sentindo que era especial   
+        </p>
+        <p>
+         &bull; O primeiro beijinho que eu te roubei jkkkkkk
+        </p>
+        <p>
+         &bull; O primeiro eu te amo dito pessoalmente...
+        </p>
+        <p>
+            &bull; O dia que eu te pedi em namoro
+        </p>
+        <p>
+         &bull; ....
+        </p>
+     </div>
+    </div>
+    <div class="hidden-content" id="surpriseContent">
+     <h3 style="color: #8b4513; margin-bottom: 20px;">
+      🎁 Surpresa Especial
+     </h3>
+     <div class="photo-vintage" style="margin: 0 auto;">
+      <img src="sofa.jpg" style="width:100%; height:100%; object-fit:cover;"/>
+     </div>
+     <div class="text-content">
+      <p>
+       Aqui voc&ecirc; pode colocar uma foto antiga de voc&ecirc;s, ou uma foto dela que voc&ecirc; ama, 
+                    ou at&eacute; mesmo uma foto de algo que voc&ecirc;s planejam fazer juntos...
+      </p>
+     </div>
+    </div>
+    <div class="hidden-content" id="letterContent">
+     <h3 style="color: #8b4513; margin-bottom: 20px;">
+      💌 Uma Carta Especial
+     </h3>
+     <div class="text-content">
+      <p>
+       <strong>
+        Para minha querida Emmilly,
+       </strong>
+      </p>
+      <br/>
+      <p>
+       Querida Emmilly,
+      </p>
+      <br/>
+      <p>
+       Criei este site pensando em tudo que voc&ecirc; ama... 
+                    cada detalhe foi escolhido com muito carinho, para que voc&ecirc; possa sentir o quanto &eacute; especial para mim. Eu queria que voc&ecirc; soubesse o quanto eu te amo, e como cada momento ao seu lado &eacute; precioso para mim. Posso te  dizer que voc&ecirc; &eacute; a pessoa mais especial da minha vida, e que eu sou grato por cada instante que passamos juntos. E eu espero que este site possa transmitir um pouco do meu amor por voc&ecirc;. Visite ele sempre que quiser, e saiba que cada coisa aqui foi pensada com muito carinho, para que voc&ecirc;.
+      </p>
+      <br/>
+      <p>
+       Eu te amarei eternamente meu amor. Voc&ecirc; &eacute; unica
+                    e merece algo &uacute;nico, assim como &eacute; a nossa hist&oacute;ria.
+      </p>
+      <br/>
+      <p>
+       Com todo meu carinho,
+       <br/>
+       [Seu futuro marido]
+      </p>
+     </div>
+    </div>
+   </div>
+   <!-- Seção do Vídeo -->
+   <div class="vintage-section video-section">
+    <h2 class="section-title">
+     Um V&iacute;deo Especial
+    </h2>
+    <p style="color: #6b5b47; font-style: italic; margin-bottom: 30px;">
+     Clique no cora&ccedil;&atilde;o para ver nossa hist&oacute;ria juntos...
+    </p>
+    <div class="heart-button" id="heartButton" onclick="playVideo()">
+     ❤️
+    </div>
+    <div class="video-container" id="videoContainer">
+     <video autoplay="True" controls="True" height="300" width="100%">
+      <source src="video.mp4" type="video/mp4"/>
+      Seu navegador n&atilde;o suporta v&iacute;deo HTML5.
+     </video>
+    </div>
+    <div class="love-message" id="loveMessage">
+     <div class="love-text">
+      Eu te amo muito! ❤️
+     </div>
+     <p style="color: #6b5b47; font-style: italic;">
+      Cada momento ao seu lado &eacute; especial, e eu queria que voc&ecirc; soubesse 
+                    o quanto voc&ecirc; significa para mim.
+     </p>
+    </div>
+   </div>
+  </div>
+  <script>
+   // Criar elementos flutuantes mais visuais
+        function createFloatingElements() {
+            const container = document.getElementById('floatingElements');
+            
+            // Elementos principais que ela ama
+            const elements = [
+                { emoji: '🐱', class: 'floating-cat', count: 3 },
+                { emoji: '🌳', class: 'floating-tree', count: 2 },
+                { emoji: '🏖️', class: 'floating-beach', count: 2 },
+                { emoji: '🎵', class: 'floating-music', count: 3 },
+                { emoji: '📜', class: 'floating-poem', count: 1 },
+                { emoji: '💿', class: 'floating-vinyl', count: 1 }
+            ];
+            
+            elements.forEach(element => {
+                for(let i = 0; i < element.count; i++) {
+                    const floatingEl = document.createElement('div');
+                    floatingEl.className = `floating-element ${element.class}`;
+                    floatingEl.innerHTML = element.emoji;
+                    
+                    // Posições aleatórias mas distribuídas
+                    floatingEl.style.left = (Math.random() * 80 + 10) + '%';
+                    floatingEl.style.top = (Math.random() * 80 + 10) + '%';
+                    floatingEl.style.animationDelay = (Math.random() * 12) + 's';
+                    floatingEl.style.animationDuration = (8 + Math.random() * 8) + 's';
+                    
+                    container.appendChild(floatingEl);
+                }
+            });
+        }
+
+        // Funções de interatividade
+        function showMemories() {
+            toggleContent('memoriesContent');
+        }
+
+        function showSurprise() {
+            toggleContent('surpriseContent');
+        }
+
+        function showLetter() {
+            toggleContent('letterContent');
+        }
+
+        function toggleContent(contentId) {
+            const content = document.getElementById(contentId);
+            if(content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                // Esconder outros conteúdos primeiro
+                ['memoriesContent', 'surpriseContent', 'letterContent'].forEach(id => {
+                    if(id !== contentId) {
+                        document.getElementById(id).style.display = 'none';
+                    }
+                });
+                content.style.display = 'block';
+                content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // Função para tocar o vídeo
+        function playVideo() {
+            const heartButton = document.getElementById('heartButton');
+            const videoContainer = document.getElementById('videoContainer');
+            const loveMessage = document.getElementById('loveMessage');
+            
+            // Animar o coração
+            heartButton.classList.add('animate');
+            
+            // Mostrar o vídeo após um breve delay
+            setTimeout(() => {
+                videoContainer.classList.add('show');
+                heartButton.style.display = 'none';
+                
+                // Simular o fim do vídeo (você pode ajustar o tempo conforme a duração do seu vídeo)
+                // Para um vídeo real, você usaria o evento 'ended' do elemento video
+                setTimeout(() => {
+                    loveMessage.classList.add('show');
+                }, 10000); // 10 segundos - ajuste conforme necessário
+                
+            }, 1000);
+        }
+
+        // Dica para adicionar fotos
+        document.querySelectorAll('.photo-placeholder').forEach(placeholder => {
+            placeholder.addEventListener('click', function() {
+                this.style.background = 'linear-gradient(45deg, #d4c5a9, #c4b597)';
+                this.innerHTML = '<span style="color: #5d4e37; font-weight: bold;">💡 Para adicionar sua foto:<br><br>Substitua este div por:<br>&lt;img src="sua-foto.jpg" style="width:100%; height:100%; object-fit:cover;"&gt;</span>';
+                
+                setTimeout(() => {
+                    this.style.background = 'linear-gradient(45deg, #e8dcc6, #d4c5a9)';
+                }, 4000);
+            });
+        });
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingElements();
+        });
+  </script>
+ </body>
+</html>
